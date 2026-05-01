@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🏏 SN Cricinfo - Real-Time Cricket Dashboard
 
-## Getting Started
+**SN Cricinfo** ek modern, high-performance cricket scoring application hai jise **Next.js 14**, **Tailwind CSS**, aur **RapidAPI** ka upyog karke banaya gaya hai. Ye application users ko live matches, upcoming schedules, aur detailed scorecards ka real-time data provide karti hai.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+*   **Live Score Streaming**: Cricbuzz API se real-time match updates.
+*   **IPL 2026 Special**: Dedicated section for IPL matches and points table.
+*   **Responsive UI**: Modern dark theme jo mobile aur desktop dono par smooth chalti hai.
+*   **Dynamic Routing**: Har match ke liye dedicated detail pages aur commentary.
+*   **Fast Performance**: Next.js Server Components aur Turbopack ka use karke optimized loading.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+*   **Frontend**: Next.js 14 (App Router)
+*   **Styling**: Tailwind CSS
+*   **API**: Cricbuzz (via RapidAPI)
+*   **Deployment**: Vercel
+*   **State Management**: React Hooks (useState, useEffect)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📦 Installation & Setup
 
-## Learn More
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/Suryanarayandixit/sn-cricinfo.git](https://github.com/Suryanarayandixit/sn-cricinfo.git)
+    cd sn-cricinfo
+    ```
 
-To learn more about Next.js, take a look at the following resources:
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3.  **Environment Variables:**
+    Root folder mein `.env.local` file banayein aur apni API keys dalein:
+    ```env
+    NEXT_PUBLIC_RAPIDAPI_KEY=your_api_key_here
+    NEXT_PUBLIC_RAPIDAPI_HOST=cricbuzz-cricket.p.rapidapi.com
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+4.  **Run Development Server:**
+    ```bash
+    npm run dev
+    ```
+    Browser mein `http://localhost:3000` open karein.
 
-## Deploy on Vercel
+## 📁 Project Structure
+```text
+├── app/               # Next.js App Router (Pages & Logic)
+├── components/        # Reusable UI Components (MatchCard, PointsTable)
+├── lib/               # API integration & Helper functions
+├── public/            # Static assets (Images, Icons)
+└── services/          # Data fetching logic
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# 🤝 Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Contributions are welcome!
+
+## 📄 License
+
+Distributed under the MIT License.
+
+---
+
+**Developed with ❤️ by [Surya](https://github.com/Suryanarayandixit)**
