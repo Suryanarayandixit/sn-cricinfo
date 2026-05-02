@@ -122,12 +122,3 @@ export async function getIPLPointsTable() {
     return null;
   }
 }
-// Player ki photo fetch karne ke liye function
-export const getPlayerPhoto = (playerId: string) => {
-  return `https://api.cricbuzz.com/p/${playerId}/photo`; // Placeholder link agar API direct photo de rahi ho
-};
-
-// Team ka logo fetch karne ke liye function
-export const getTeamLogo = (teamId: string) => {
-  return `https://api.cricbuzz.com/t/${teamId}/logo`;
-};
