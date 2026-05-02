@@ -5,7 +5,6 @@ const headers = {
   'X-RapidAPI-Host': process.env.RAPIDAPI_HOST!,
 };
 
-// Extract all matches from all series
 function extractMatches(data: any) {
   if (!data?.typeMatches) return [];
   const all: any[] = [];
@@ -18,7 +17,6 @@ function extractMatches(data: any) {
   return all;
 }
 
-// Extract only IPL matches
 function extractIPLMatches(data: any) {
   if (!data?.typeMatches) return [];
   for (const type of data.typeMatches) {
@@ -40,10 +38,7 @@ export async function getLiveMatches() {
     });
     if (!res.ok) throw new Error('API error');
     const data = await res.json();
-    return {
-      all: extractMatches(data),
-      ipl: extractIPLMatches(data),
-    };
+    return { all: extractMatches(data), ipl: extractIPLMatches(data) };
   } catch {
     return { all: [], ipl: [] };
   }
@@ -57,10 +52,7 @@ export async function getRecentMatches() {
     });
     if (!res.ok) throw new Error('API error');
     const data = await res.json();
-    return {
-      all: extractMatches(data),
-      ipl: extractIPLMatches(data),
-    };
+    return { all: extractMatches(data), ipl: extractIPLMatches(data) };
   } catch {
     return { all: [], ipl: [] };
   }
@@ -74,10 +66,7 @@ export async function getUpcomingMatches() {
     });
     if (!res.ok) throw new Error('API error');
     const data = await res.json();
-    return {
-      all: extractMatches(data),
-      ipl: extractIPLMatches(data),
-    };
+    return { all: extractMatches(data), ipl: extractIPLMatches(data) };
   } catch {
     return { all: [], ipl: [] };
   }
@@ -104,6 +93,31 @@ export async function getMatchCommentary(matchId: string) {
     });
     if (!res.ok) throw new Error('API error');
     return await res.json();
+  } catch {
+    return null;
+  }
+}
+
+export async function getIPLPointsTable() {
+  try {
+    // IPL 2026 series ID
+    const seriesRes = await fetch(`${BASE_URL}/series/v1/9241`, {
+      headers,
+      next: { revalidate: 300 },
+    });
+    if (!seriesRes.ok) throw new Error('API error');
+    const data = await seriesRes.json();
+    const standings = data?.pointsTable?.[0]?.pointsTableInfo || [];
+    return standings.map((t: any, i: number) => ({
+      pos: i + 1,
+      team: t.teamName,
+      sName: t.teamSName,
+      p: t.matchesPlayed,
+      w: t.matchesWon,
+      l: t.matchesLost,
+      pts: t.points,
+      nrr: t.nrrDisplay || t.nrr || '0.000',
+    }));
   } catch {
     return null;
   }

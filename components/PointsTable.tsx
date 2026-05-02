@@ -2,7 +2,7 @@ export default function PointsTable({ data }: { data: any[] }) {
   return (
     <div className="bg-pitch-800 rounded-xl border border-white/10 overflow-hidden">
       <div className="bg-pitch-700 px-4 py-3 border-b border-white/10">
-        <h3 className="font-display font-bold text-white text-base">IPL 2024 Points Table</h3>
+        <h3 className="font-display font-bold text-white text-base">IPL 2026 Points Table</h3>
       </div>
       <div className="overflow-x-auto">
         <table className="w-full text-xs">

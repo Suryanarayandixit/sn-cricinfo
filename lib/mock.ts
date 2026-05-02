@@ -32,18 +32,17 @@ export const mockLiveMatches = [
 ];
 
 export const mockPointsTable = [
-  { pos: 1, team: 'Rajasthan Royals', sName: 'RR', p: 10, w: 7, l: 3, pts: 14, nrr: '+0.923' },
-  { pos: 2, team: 'Kolkata Knight Riders', sName: 'KKR', p: 10, w: 7, l: 3, pts: 14, nrr: '+0.631' },
-  { pos: 3, team: 'Sunrisers Hyderabad', sName: 'SRH', p: 10, w: 6, l: 4, pts: 12, nrr: '+0.411' },
-  { pos: 4, team: 'Chennai Super Kings', sName: 'CSK', p: 10, w: 6, l: 4, pts: 12, nrr: '+0.212' },
-  { pos: 5, team: 'Delhi Capitals', sName: 'DC', p: 10, w: 5, l: 5, pts: 10, nrr: '-0.132' },
-  { pos: 6, team: 'Royal Challengers Bangalore', sName: 'RCB', p: 10, w: 4, l: 6, pts: 8, nrr: '+0.098' },
-  { pos: 7, team: 'Lucknow Super Giants', sName: 'LSG', p: 10, w: 4, l: 6, pts: 8, nrr: '-0.293' },
-  { pos: 8, team: 'Gujarat Titans', sName: 'GT', p: 10, w: 4, l: 6, pts: 8, nrr: '-0.387' },
-  { pos: 9, team: 'Punjab Kings', sName: 'PBKS', p: 10, w: 3, l: 7, pts: 6, nrr: '-0.512' },
-  { pos: 10, team: 'Mumbai Indians', sName: 'MI', p: 10, w: 2, l: 8, pts: 4, nrr: '-0.871' },
+  { pos: 1, team: 'Royal Challengers Bangalore', sName: 'RCB', p: 12, w: 9, l: 3, pts: 18, nrr: '+1.236' },
+  { pos: 2, team: 'Punjab Kings', sName: 'PBKS', p: 12, w: 8, l: 4, pts: 16, nrr: '+0.812' },
+  { pos: 3, team: 'Mumbai Indians', sName: 'MI', p: 12, w: 7, l: 5, pts: 14, nrr: '+0.543' },
+  { pos: 4, team: 'Chennai Super Kings', sName: 'CSK', p: 12, w: 7, l: 5, pts: 14, nrr: '+0.321' },
+  { pos: 5, team: 'Delhi Capitals', sName: 'DC', p: 12, w: 6, l: 6, pts: 12, nrr: '+0.123' },
+  { pos: 6, team: 'Kolkata Knight Riders', sName: 'KKR', p: 12, w: 5, l: 7, pts: 10, nrr: '-0.234' },
+  { pos: 7, team: 'Rajasthan Royals', sName: 'RR', p: 12, w: 5, l: 7, pts: 10, nrr: '-0.412' },
+  { pos: 8, team: 'Sunrisers Hyderabad', sName: 'SRH', p: 12, w: 4, l: 8, pts: 8, nrr: '-0.634' },
+  { pos: 9, team: 'Gujarat Titans', sName: 'GT', p: 12, w: 3, l: 9, pts: 6, nrr: '-0.821' },
+  { pos: 10, team: 'Lucknow Super Giants', sName: 'LSG', p: 12, w: 2, l: 10, pts: 4, nrr: '-1.134' },
 ];
-
 export const mockCommentary = [
   { over: '18.3', text: 'FOUR! Dhoni smashes it through covers. CSK closing in fast!' },
   { over: '18.1', text: 'Wide down the leg side. Pressure building on MI.' },
